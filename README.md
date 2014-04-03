@@ -22,6 +22,6 @@ php artisan migrate
 //seed the database
 php artisan db:seed --class='PostsTableSeeder'
 ```
-then you need to modify `config/services.php` with your Stripe API key.
+then you need to modify `config/services.php` with your Stripe secret API key and `views/signup.blade.php` with your publishable key.
 
 You can run `php artisan serve` and create a new account to test the app.

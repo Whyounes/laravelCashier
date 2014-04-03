@@ -94,7 +94,7 @@
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
 <script>
-    Stripe.setPublishableKey('pk_test_tJOo0X1QE2OFs3JXwfGpWMpY');
+    Stripe.setPublishableKey('Stripe publishable API key');
     jQuery(function($) {
         $('#subscription-form').submit(function(event) {
             var $form = $(this);
