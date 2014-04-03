@@ -11,9 +11,7 @@
 |
 */
 
-use Illuminate\Support\Facades\Auth;
-
-Auth::loginUsingId(1);
+//Auth::loginUsingId(1);
 
 Route::get('/', function()
 {
@@ -22,8 +20,8 @@ Route::get('/', function()
 	return View::make('index', [ 'posts' => $posts ]);
 })->before('auth');
 
-Route::get('/post/{id}', [ 'as' => 'post', 'uses' => 'PostsController@show' ])->before('auth');
 
+Route::get('/post/{id}', [ 'as' => 'post', 'uses' => 'PostsController@show' ])->before('auth');
 Route::resource('login', 'LoginController', [ 'only' => [ 'index', 'store', 'destroy' ] ]);
 Route::resource('signup', 'SignupController', [ 'only' => [ 'index', 'store' ] ]);
 Route::resource('upgrade', 'UpgradeController', [ 'only' => [ 'index', 'store' ] ]);
