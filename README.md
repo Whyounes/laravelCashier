@@ -16,7 +16,7 @@ git clone git@github.com:Whyounes/laravelCashier.git
 //install the dependencies
 composer install
 
-//migrate the database
+//update your `config/database.php` with your database credentials, then migrate the table to the database
 php artisan migrate
 
 //seed the database
